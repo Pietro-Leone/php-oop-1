@@ -1,10 +1,11 @@
 <?php
 require_once 'Movie.php';
 
-$movie1 = new Movie();
-$movie1->nome_film = 'prova';
-$movie1->regista = 'prova2';
-$movie1->data_uscita = 'prova3';
+$movie1 = new Movie('Titolo' , '1999');
+$movie1->director = 'Direttore';
+$movie1->runtime = '145 min';
+$movie1->genres = 'Action';
+
 
 var_dump($movie1);
 ?>
@@ -30,7 +31,7 @@ var_dump($movie1);
   <div class="container">
     <div class="row">
       <div class="col">
-
+        <?php echo $movie1->getInfo()?>
       </div>
     </div>
 
